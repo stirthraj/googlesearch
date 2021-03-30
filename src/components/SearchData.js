@@ -23,7 +23,7 @@ function SearchData(props) {
     fetch(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${query}`)
     .then(res=>res.json())
     .then(res=>{
-      setResult(res.items);
+    setResult(res.items);
     })
   }, [query]);
 

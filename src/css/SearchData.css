@@ -23,6 +23,40 @@
     border: 1px solid #1670BE;
     box-shadow: 0 0 3px #1670BE;
 }
+@media only screen and (max-width: 600px){
+  .Sticky-input{
+    padding: 10px 50px 10px 50px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #1670BE;
+    box-shadow: 0 0 3px #1670BE;
+}  
+.Sticky{
+    top: 0;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    padding: 1px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
+    border-color: rgba(223,225,229,0);
+}
+.Sticky-input{
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #1670BE;
+    box-shadow: 0 0 3px #1670BE;
+}
+.Sticky-logo{
+    height: 35px;
+    width: 100px;
+    padding: 3px;
+}
+.Sign-up{
+    display: none;
+}
+}
 .Sticky-input:focus{
     border: 1px solid #1670BE;
     box-shadow: 0 0 3px #1670BE;
@@ -65,7 +99,12 @@ position: absolute;
 .container{
     width: 700px;
     margin: auto 220px auto 160px;
-
+}
+@media only screen and (max-width:600px){
+    .container{
+        width: 100%;
+        margin: 5px;
+    }
 }
 .card{
    padding: 0px 2px;
@@ -88,20 +127,10 @@ a:hover{
     background-color:#f2f2f2;
     padding: 10px;
     margin-bottom: 0px;
-    width: 100%;
 }
 .footer>h4{
     text-align: center;
 }
-
-.Page{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 700px;
-    margin:auto;
-}
-
 .card-link{
     color: grey;
 }
