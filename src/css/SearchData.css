@@ -1,0 +1,107 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+.Sticky{
+    top: 0;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
+    border-color: rgba(223,225,229,0);
+}
+.Sticky-logo{
+    height: 35px;
+    width: 160px;
+    padding: 4px 30px 0px 30px;
+}
+.Sticky-input{
+    padding: 10px 100px 10px 20px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #1670BE;
+    box-shadow: 0 0 3px #1670BE;
+}
+.Sticky-input:focus{
+    border: 1px solid #1670BE;
+    box-shadow: 0 0 3px #1670BE;
+    outline-offset: 0px;
+    outline: transparent;
+}
+.Sticky-bar{
+    border-radius: 10px;
+}
+.Sticky-bar-mic{
+position: absolute;
+    margin-top: 8px;
+    margin-left: -70px;
+}
+.Sticky-bar-search{
+  margin-top: 6px;
+  margin-left: 5px;
+}
+.Sticky-btn{
+    background-color: transparent;
+    margin-top: 1px;
+    position: absolute;
+    margin-left: -50px;
+    border: transparent;
+}
+.Sign-up{
+    margin-left: 7%;
+}
+.Sign-btn{
+    background-color:#1a73e8;
+    border:1px solid transparent;
+    color:white;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container{
+    width: 700px;
+    margin: auto 220px auto 160px;
+
+}
+.card{
+   padding: 0px 2px;
+   margin: 0px 2px;
+}
+.card-title{
+    margin: 2px 0px;
+    padding: 2px 0px;
+}
+.Sticky + .container {
+  padding-top: 42px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.footer{
+    background-color:#f2f2f2;
+    padding: 10px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+.footer>h4{
+    text-align: center;
+}
+
+.Page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+    margin:auto;
+}
+
+.card-link{
+    color: grey;
+}

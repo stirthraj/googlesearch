@@ -1,0 +1,37 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+.Search{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Search-input{
+    padding: 10px 100px 10px 100px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #1670BE;
+    box-shadow: 0 0 3px #1670BE;
+}
+.Search-input:focus{
+    border: 1px solid #1670BE;
+    box-shadow: 0 0 3px #1670BE;
+    outline-offset: 0px;
+    outline: transparent;
+}
+.Search-bar{
+    border-radius: 10px;
+}
+.Search-bar-prev{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 3px;
+    z-index: 1;
+}
+.Search-bar-next{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: -30px;
+}
