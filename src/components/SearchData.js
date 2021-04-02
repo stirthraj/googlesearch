@@ -61,7 +61,7 @@ function SearchData(props) {
         </div>
       </div>
 
-      <div className="container">
+      <div style={{ backgroundColor: props.color }} className="container">
         <SearchResult data={result} />
       </div>
       <p></p>

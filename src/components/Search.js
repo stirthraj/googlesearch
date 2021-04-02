@@ -41,7 +41,7 @@ function Search() {
       </>
     );
   } else {
-    return <SearchData query={query} />;
+    return <SearchData query={query} color={col[color]} />;
   }
 }
 export default Search;
