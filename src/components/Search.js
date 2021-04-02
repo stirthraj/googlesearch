@@ -5,10 +5,12 @@ import { useEffect, useState } from "react";
 import SearchData from "./SearchData";
 import '../css/Search.css';
 
-function Search() {
+function Search(props) {
   const [query, setQuery] = useState("");
   const [color,setColor]=useState(0);
-  const col=["white","grey","green","blue"];
+  const col = ["white", "#e8b2b2", "#b0e8b0", "#dbe08b9e", "#d49bd29e"];
+  props.colorFunction(col[color]);
+
   const onKeyUpHandle = (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
@@ -22,7 +24,7 @@ function Search() {
   if (query === "") {
     return (
       <>
-        <div style={{backgroundColor:col[color]}} className="Search">
+        <div className="Search">
           <div>
             <img className="Search-logo" src={logo} alt="logo" />
           </div>
@@ -36,7 +38,7 @@ function Search() {
             />
             <img className="Search-bar-next" src={mic} alt="mic-icon" />
           </div>
-          <button onClick={()=>setColor((color+1)%4)}>Customize</button>
+          <button onClick={()=>setColor((color+1)%5)}>Customize</button>
         </div>
       </>
     );

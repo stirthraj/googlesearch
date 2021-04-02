@@ -1,10 +1,15 @@
+import { useState } from "react";
 import Search from "./components/Search";
 
 
 function App() {
+  const [c,setC]=useState("");
+
   return (
     <>
-      <Search />
+      <div className="main" style={{backgroundColor:c}}>
+        <Search colorFunction={(color) => setC(color)} />
+      </div>
     </>
   );
 }
