@@ -6,7 +6,7 @@
     display: flex;
     position: fixed;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     background-color: #fff;
     box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
     border-color: rgba(223,225,229,0);
@@ -98,7 +98,7 @@ position: absolute;
 
 .container{
     width: 700px;
-    margin: auto 220px auto 160px;
+    margin: 100px 220px 20px 160px;
 }
 @media only screen and (max-width:600px){
     .container{

@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Snapshot SearchData correctly 1`] = `
+Array [
+  <div
+    className="Sticky"
+  >
+    <div>
+      <img
+        alt="logo"
+        className="Sticky-logo"
+        src="google_logo.svg"
+      />
+    </div>
+    <div
+      className="Sticky-bar"
+    >
+      <input
+        className="Sticky-input"
+        onKeyUp={[Function]}
+        placeholder="Search Google or type a URL"
+        size="50"
+      />
+      <button
+        className="Sticky-btn"
+        onClick={[Function]}
+      >
+        <img
+          alt="icon"
+          className="Sticky-bar-search"
+          src="search.svg"
+        />
+      </button>
+      <img
+        alt="mic-icon"
+        className="Sticky-bar-mic"
+        src="googlemic_clr_24px.svg"
+      />
+    </div>
+    <div
+      className="Sign-up"
+    >
+      <button
+        className="Sign-btn"
+      >
+        Sign in
+      </button>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <h3>
+      Search Results
+    </h3>
+  </div>,
+  <p />,
+  <div
+    className="footer"
+  >
+    <h4>
+      KloudOne © @2021-2022
+    </h4>
+  </div>,
+]
+`;
+
+exports[`Testing Snapshot SearchResult correctly 1`] = `
+<div>
+  Error to get request
+</div>
+`;

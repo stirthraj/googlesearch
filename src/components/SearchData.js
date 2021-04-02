@@ -1,32 +1,38 @@
-import { useEffect, useRef, useState } from 'react';
-import '../css/SearchData.css';
+import { useEffect, useRef, useState } from "react";
+import "../css/SearchData.css";
 import search from "../img/search.svg";
 import mic from "../img/googlemic_clr_24px.svg";
 import logo from "../img/google_logo.svg";
+import SearchResult from "./SearchResult";
 
 function SearchData(props) {
-  const [query,setQuery]=useState(props.query);
-  const [result,setResult]=useState([]);  
+  const [query, setQuery] = useState(props.query);
+  const [result, setResult] = useState([]);
 
-  const qq=useRef();
+  const qq = useRef();
   const onKeyUpHandle = (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
       setQuery(e.target.value);
     }
   };
-  const API_KEY = 'AIzaSyDrLZZoy4wQ9 - t0dJvWAfMxWlhfvdeXdak';
-  const CONTEXT_KEY = 'b285d02aa413dc4f4';
+  const API_KEY = "AIzaSyDrLZZoy4wQ9 - t0dJvWAfMxWlhfvdeXdak";
+  const CONTEXT_KEY = "b285d02aa413dc4f4";
 
   useEffect(() => {
-    document.title = `Result of ${query}`;
-    fetch(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${query}`)
-    .then(res=>res.json())
-    .then(res=>{
-    setResult(res.items);
-    })
+    async function GoogleQuery() {
+      await fetch(
+        `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${query}`
+      )
+        .then((res) => res.json())
+        .then((res) => setResult(res.items))
+        .catch((error) => {
+          console.log(error);
+        });
+      document.title = `Result of ${query}`;
+    }
+    GoogleQuery();
   }, [query]);
-
   return (
     <>
       <div className="Sticky">
@@ -54,26 +60,16 @@ function SearchData(props) {
           <button className="Sign-btn">Sign in</button>
         </div>
       </div>
+
       <div className="container">
-        {result.map((res) => (
-          <div key={res.id} className="card">
-            <div style={{ margin: "10px" }}>
-              <div className="card-link">{res.formattedUrl}</div>
-              <a href={res.formattedUrl}>
-                <h3
-                  className="card-title"
-                  dangerouslySetInnerHTML={{ __html: res.htmlTitle }}
-                />
-              </a>
-              <div>{res.snippet}</div>
-            </div>
-          </div>
-        ))}
+        <SearchResult data={result} />
       </div>
+      <p></p>
       <div className="footer">
         <h4>KloudOne &copy; @2021-2022</h4>
       </div>
     </>
   );
 }
+
 export default SearchData;

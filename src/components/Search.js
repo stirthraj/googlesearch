@@ -7,6 +7,8 @@ import '../css/Search.css';
 
 function Search() {
   const [query, setQuery] = useState("");
+  const [color,setColor]=useState(0);
+  const col=["white","grey","green","blue"];
   const onKeyUpHandle = (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
@@ -20,7 +22,7 @@ function Search() {
   if (query === "") {
     return (
       <>
-        <div className="Search">
+        <div style={{backgroundColor:col[color]}} className="Search">
           <div>
             <img className="Search-logo" src={logo} alt="logo" />
           </div>
@@ -34,6 +36,7 @@ function Search() {
             />
             <img className="Search-bar-next" src={mic} alt="mic-icon" />
           </div>
+          <button onClick={()=>setColor((color+1)%4)}>Customize</button>
         </div>
       </>
     );
