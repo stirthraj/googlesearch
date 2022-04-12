@@ -66,7 +66,7 @@ function SearchData(props) {
       </div>
       <p></p>
       <div className="footer">
-        <h4>KloudOne &copy; @2021-2022</h4>
+        <h4>Eduwheel India &copy; @2021-2022</h4>
       </div>
     </>
   );
